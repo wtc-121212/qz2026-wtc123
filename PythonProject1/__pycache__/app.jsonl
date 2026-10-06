@@ -1,0 +1,5 @@
+{"timestamp": "2026-10-01 10:23:45", "level": "INFO", "message": "启动成功", "user": "张三"}
+{"timestamp": "2026-10-01 10:24:01", "level": "INFO", "message": "登录成功", "user": "李四"}
+{"timestamp": "2026-10-01 10:25:12", "level": "ERROR", "message": "数据库连接失败", "user": "张三"}
+{"timestamp": "2026-10-01 10:26:30", "level": "INFO", "message": "查询成功", "user": "李四"}
+{"timestamp": "2026-10-01 10:27:00", "level": "ERROR", "message": "超时", "user": "王五"}
