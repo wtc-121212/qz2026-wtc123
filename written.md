@@ -1,4 +1,4 @@
-# 选择题 + 简答题
+の4w# 选择题 + 简答题
 
 > 本文件包含所有选择题与简答题，请在你的仓库中于本文件作答。
 > **硬性要求：本文件所有题目均必须完成，未完成的题目不进入部门筛选流程。**
@@ -206,7 +206,15 @@ logs = [
 3. 解释为什么第 2 问不能直接用 `len(logs)` 得到结果，需要什么遍历结构？
 
 （在此作答）
-
+1.a for a in logs if a["level"]="ERROR"
+2.count={}
+for user in logs:
+  name =user["user"]
+  if name in count:
+    count[name]+=1
+  else:
+    count[name]=1
+3.len是获取总记录无法区分不同用户 需要使用for循环遍历
 ### 第 3 题：异常处理设计
 
 Day_10 中你写过 `safe_int(s)` 函数：能转就返回整数，不能转就返回 `None`。
@@ -220,4 +228,13 @@ Day_10 中你写过 `safe_int(s)` 函数：能转就返回整数，不能转就�
 
 请写出函数代码，并说明：为什么这里用 `try/except` 比先用 `if` 判断再计算更好？
 
-（在此作答）
+def safe_divide(a, b):
+    try:
+        num1 = float(a)
+        num2 = float(b)
+        divide_result = num1 / num2
+        return divide_result
+    except (ValueError, ZeroDivisionError):
+        return None
+用if不好可能因为除法的边界条件过多？要判断的条件太多用if写起来太费事 
+
